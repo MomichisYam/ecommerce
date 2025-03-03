@@ -25,3 +25,19 @@ NULL.
 | IDCancion | Titulo | Duración | IDArtista | IDAlbum |
 |-|-|-|-|-|
 | 6 | 365 | 05:15 | 9 | 10 |
+
+## Relaciones de llaves foráneas 
+
+* **FOREIGN KEY (IDArtista1) REFERENCES Artista(ID) ON DELETE 
+CASCADE ON UPDATE CASCADE**: La clave foránea IDArtista1 se refiere al ID 
+de la tabla Artista. Si se elimina un artista, se eliminarán todas las canciones asociadas 
+a ese artista. Si se actualiza el ID de un artista, se actualizará automáticamente en las 
+canciones relacionadas. 
+* **FOREIGN KEY (IDArtista2) REFERENCES Artista(ID) ON DELETE 
+CASCADE ON UPDATE CASCADE**: Similar a la anterior, pero para el segundo 
+artista (en caso de existir). 
+* **FOREIGN KEY (IDAlbum) REFERENCES Album(ID) ON DELETE 
+CASCADE ON UPDATE CASCADE**: La clave foránea IDAlbum se refiere al ID 
+de la tabla Album. Si se elimina un álbum, todas las canciones asociadas a ese álbum 
+serán eliminadas. Si se actualiza el ID de un álbum, se actualizará automáticamente 
+en las canciones. 
