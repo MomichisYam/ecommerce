@@ -41,3 +41,10 @@ CASCADE ON UPDATE CASCADE**: La clave foránea IDAlbum se refiere al ID
 de la tabla Album. Si se elimina un álbum, todas las canciones asociadas a ese álbum 
 serán eliminadas. Si se actualiza el ID de un álbum, se actualizará automáticamente 
 en las canciones. 
+
+## Restricción de unicidad 
+
+* **UNIQUE (Titulo, IDArtista1, IDAlbum)**: Asegura que no pueda haber dos 
+canciones con el mismo título, mismo IDArtista1 y mismo IDAlbum. Esto es útil si 
+un artista tiene múltiples canciones en un álbum, pero no se pueden repetir canciones 
+con el mismo título en el mismo álbum para el mismo artista.
